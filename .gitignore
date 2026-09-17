@@ -1,0 +1,29 @@
+__pycache__/
+*.py[cod]
+*.so
+.DS_Store
+.venv/
+venv/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Reproduction inputs and generated artifacts
+data/
+outputs/
+checkpoints/
+external/
+figures/
+*.pt
+*.pth
+*.pkl
+*.pickle
+*.safetensors
+
+# Cluster logs
+slurm-*.out
+slurm-*.err
+*.log

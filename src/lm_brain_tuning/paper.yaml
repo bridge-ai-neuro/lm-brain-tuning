@@ -1,0 +1,68 @@
+experiment:
+  folds: 4
+  epochs: 5
+  batch_size: 16
+  validation_fraction: 0.20
+  seed: 42
+  weight_decay: 0.0
+  fmri_aggregation: none
+
+models:
+  bert:
+    id: bert-base-cased
+    objective: causal_lm
+    target_modules: [query, value, key, dense]
+  gpt2:
+    id: gpt2
+    objective: causal_lm
+    target_modules: [c_attn, c_proj, c_fc]
+
+datasets:
+  hp:
+    subjects: [F, H, I, J, K, L, M, N]
+    context_words: 20
+    context_groups: 5
+    checkpoint_eval_steps: 3
+    noise_ceiling_threshold: 0.05
+  moth:
+    subjects: ['01', '02', '03', '05', '07', '08']
+    context_words: 100
+    context_groups: 5
+    checkpoint_eval_steps: 20
+    noise_ceiling_threshold: 0.05
+
+regimes:
+  pretrained:
+    learning_rate: 0.0
+    lm_weight: 1.0
+    brain_weight: 0.0
+    lora_rank: null
+    lora_alpha: null
+    lora_dropout: 0.0
+  brain:
+    learning_rate: 0.00005
+    lm_weight: 0.0
+    brain_weight: 1.0
+    lora_rank: 4
+    lora_alpha: 8
+    lora_dropout: 0.0
+  stimulus:
+    learning_rate: 0.00005
+    lm_weight: 1.0
+    brain_weight: 0.0
+    lora_rank: 4
+    lora_alpha: 8
+    lora_dropout: 0.0
+  joint:
+    learning_rate: 0.0005
+    lm_weight: 0.1
+    brain_weight: 10.0
+    lora_rank: 8
+    lora_alpha: 8
+    lora_dropout: 0.0
+
+evaluation:
+  ridge:
+    splits: 10
+    lambdas: [10000, 100000, 1000000, 10000000, 100000000, 1000000000]
+  holmes_seeds: [0, 1, 2, 3, 4]

@@ -1,0 +1,45 @@
+{
+  "dataset": "hp",
+  "subjects": ["F", "H", "I", "J", "K", "L", "M", "N"],
+  "context_words": 20,
+  "context_groups": 5,
+  "citation": "Wehbe et al. (2014)",
+  "url": "https://doi.org/10.5061/dryad.gt413",
+  "stimulus": {
+    "words": "source/words.npy",
+    "word_times": "source/word-times.npy",
+    "fmri_times": "source/fmri-times.npy",
+    "trusted_object_arrays": false
+  },
+  "runs": "source/runs.npy",
+  "responses": {
+    "F": "source/responses/sub-F.npy",
+    "H": "source/responses/sub-H.npy",
+    "I": "source/responses/sub-I.npy",
+    "J": "source/responses/sub-J.npy",
+    "K": "source/responses/sub-K.npy",
+    "L": "source/responses/sub-L.npy",
+    "M": "source/responses/sub-M.npy",
+    "N": "source/responses/sub-N.npy"
+  },
+  "language_masks": {
+    "F": "source/language-masks/sub-F.npy",
+    "H": "source/language-masks/sub-H.npy",
+    "I": "source/language-masks/sub-I.npy",
+    "J": "source/language-masks/sub-J.npy",
+    "K": "source/language-masks/sub-K.npy",
+    "L": "source/language-masks/sub-L.npy",
+    "M": "source/language-masks/sub-M.npy",
+    "N": "source/language-masks/sub-N.npy"
+  },
+  "noise_ceilings": {
+    "F": "source/noise-ceilings/sub-F.npy",
+    "H": "source/noise-ceilings/sub-H.npy",
+    "I": "source/noise-ceilings/sub-I.npy",
+    "J": "source/noise-ceilings/sub-J.npy",
+    "K": "source/noise-ceilings/sub-K.npy",
+    "L": "source/noise-ceilings/sub-L.npy",
+    "M": "source/noise-ceilings/sub-M.npy",
+    "N": "source/noise-ceilings/sub-N.npy"
+  }
+}

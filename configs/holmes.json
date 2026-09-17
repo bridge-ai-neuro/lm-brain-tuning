@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/Holmes-Benchmark/holmes-evaluation.git",
+  "revision": "bded82c8e8941fbc651c2eee7203b01f6a6c1de6",
+  "entrypoint": "src/investigate.py",
+  "seeds": [0, 1, 2, 3, 4]
+}

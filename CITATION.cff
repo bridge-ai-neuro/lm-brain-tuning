@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated CoNLL paper."
+title: "lm-brain-tuning"
+type: software
+version: 0.1.0
+date-released: 2026-09-16
+license: MIT
+authors:
+  - family-names: Merlin
+    given-names: Gabriele
+preferred-citation:
+  type: conference-paper
+  title: "What Brain Data Adds to Language Model Training"
+  authors:
+    - family-names: Merlin
+      given-names: Gabriele
+    - family-names: Moussa
+      given-names: Omer
+    - family-names: Toneva
+      given-names: Mariya
+  year: 2026
+  doi: 10.18653/v1/2026.conll-main.12
+  conference:
+    name: Conference on Computational Natural Language Learning
+  url: "https://aclanthology.org/2026.conll-main.12/"
